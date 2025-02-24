@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Landsat 8</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Yifan FENG" />
+    <script src="libs/header-attrs-2.28/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Landsat 8
+]
+.subtitle[
+## A Technical Overview and Applications
+]
+.author[
+### Yifan FENG
+]
+.institute[
+### CASA0023 Remotely Sensing Cities and Environments
+]
+.date[
+### 2025/01/26 (updated: 2025-02-24)
+]
+
+---
+
+
+# Summary: Landsat 8 Overview
+
+**The first Landsat satellite in the 21st century.**
+
+.middle[
+.pull-left[
+- **Launched**: February 11, 2013
+- **Operational Lifetime**: 12+ years (still active)
+- **Orbit**: Sun-synchronous, 705 km altitude
+- **Temporal Resolution**: 16-day repeat cycle
+- **Spatial Resolution**: 15m - 100m (depending on band)
+]
+
+.pull-right[
+![](images/Landsat 8 rendition.jpg)
+
+*Landsat 8 in orbit (Source: USGS)*
+]
+]
+
+
+---
+# Summary: Sensor Specifications
+## Two Main Sensors:
+**Operational Land Imager (OLI)**
+- 9 spectral bands (visible, NIR, SWIR)
+- 30m spatial resolution (15m for panchromatic)
+- Band 1-9
+
+**Thermal Infrared Sensor (TIRS)**
+- 2 thermal bands
+- 100m spatial resolution
+- Band 10-11
+&lt;div style="transform: scale(0.5); transform-origin: top left;"&gt;
+  &lt;table style="border-collapse: collapse; width: 100%; font-size: 12px;"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Band&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Wavelength (µm)&lt;/th&gt;
+      &lt;th&gt;Resolution (m)&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Coastal Aerosol&lt;/td&gt;
+      &lt;td&gt;0.43 - 0.45&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Blue&lt;/td&gt;
+      &lt;td&gt;0.450 - 0.51&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Green&lt;/td&gt;
+      &lt;td&gt;0.53 - 0.59&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Red&lt;/td&gt;
+      &lt;td&gt;0.64 - 0.67&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Near-Infrared&lt;/td&gt;
+      &lt;td&gt;0.85 - 0.88&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;SWIR 1&lt;/td&gt;
+      &lt;td&gt;1.57 - 1.65&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;SWIR 2&lt;/td&gt;
+      &lt;td&gt;2.11 - 2.29&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Panchromatic (PAN)&lt;/td&gt;
+      &lt;td&gt;0.50 - 0.68&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;Cirrus&lt;/td&gt;
+      &lt;td&gt;1.36 - 1.38&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;TIRS 1&lt;/td&gt;
+      &lt;td&gt;10.6 - 11.19&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;TIRS 2&lt;/td&gt;
+      &lt;td&gt;11.5 - 12.51&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+
+---
+# Summary: Key Improvements 
+**Compared to Landsat 7, Landsat 8 has the following improvements**
+- Enhanced Signal-to-Noise Ratio (SNR)
+- 12-bit quantization (vs. 8-bit)
+- No Scan Line Corrector issues
+- New Coastal/Aerosol band
+- Split thermal bands for better temperature measurements
+
+.center[
+![](images/dmidS2LS7Comparison.png)
+]
+
+---
+
+# Applications: Urban Studies
+
+Landsat 8 provides significant improvements for Surface Urban Heat Island (SUHI) research through its TIRS sensor. The dual thermal bands (10 and 11) enable more accurate Land Surface Temperature (LST) retrieval using the split-window algorithm, while its high radiometric resolution (12-bit) offers better thermal detail detection compared to previous Landsat missions (Zhou, 2019).
+
+Landsat 8 has been extensively used in studying diurnal temperature variations, seasonal UHI patterns, and the relationship between land use changes and urban temperature. However, its 16-day revisit cycle limits the temporal analysis of rapid urban temperature changes.
+
+&lt;div class="center"&gt;
+  &lt;img src="images/remotesensing-11-00048-g004-550热岛.webp" alt="Heat Island Image" style="width: 30%; margin: 0 auto;"&gt;
+&lt;/div&gt;
+
+
+---
+# Applications: Environmental Monitoring
+
+## Forest Change Detection
+Hansen et al. (2013) utilized Landsat 8 alongside Landsat 7 to create the first global, high-resolution maps of forest change. The study specifically leveraged Landsat 8's enhanced 12-bit radiometric resolution and improved signal-to-noise ratio to detect subtle changes in forest cover that were previously difficult to identify.
+
+The research mapped global forest extent and change from 2000 to 2012 at 30-meter resolution, identifying approximately 2.3 million square kilometers of forest loss. Landsat 8's data continuity with previous Landsat missions was crucial for maintaining consistent long-term forest monitoring capabilities.
+
+&lt;div class="center"&gt;
+  &lt;img src="images/hansen全球森林变化.jpeg" alt="Global Forest Change" style="width: 60%; margin: 0 auto;"&gt;
+&lt;/div&gt;
+
+---
+# Reflection: Current Limitations
+
+The Landsat 8 mission, despite its advanced capabilities, faces several practical challenges I discovered while working with its data. The 16-day revisit cycle means I could only access two images per month of my study area at best. When factoring in cloud cover, which often exceeds 60% in tropical regions like Southeast Asia, getting a clear image could take several months. I found this particularly frustrating when trying to monitor rapid forest changes or urban development.
+
+Working with the 30-meter resolution data proved challenging in my urban analysis projects. When examining a single pixel in a dense urban area, it often contained a mix of buildings, roads, and vegetation, making it difficult to accurately classify land use. This issue became even more apparent when I attempted to detect small-scale urban changes or identify individual buildings. The need for specialized software like ENVI for processing the large data files (often exceeding 1GB per scene) and performing atmospheric corrections also created a significant barrier for many potential users, especially those in resource-limited settings.
+---
+
+# Reflection: Future Perspectives
+
+Looking forward, I see tremendous potential in overcoming current limitations through technological advancement and integration. The emergence of machine learning and artificial intelligence promises to revolutionize how we process and analyze Landsat 8 data, enabling more efficient and automated analysis at global scales. Particularly exciting is the potential for combining Landsat data with other Earth observation sources, such as Sentinel-2 imagery and UAV data, which could address current temporal and spatial resolution limitations.
+
+From a personal perspective, this study has highlighted the vital role of remote sensing in addressing global challenges. While I may not directly work with Landsat 8 in the future, understanding its capabilities and limitations has deepened my appreciation for Earth observation technologies. The skills and knowledge gained through studying this system will be invaluable for future work in environmental monitoring and policy development, particularly as we face increasing challenges from climate change and the need for sustainable resource management.
+
+---
+# References
+
+  Hansen, M. C. et al. (2013) High-Resolution Global Maps of 21st-Century Forest Cover Change. Science (American Association for the Advancement of Science). [Online] 342 (6160), 850–853.
+
+
+  Zhou, D. et al. (2019) Satellite remote sensing of surface urban heat islands: Progress, challenges, and perspectives. Remote sensing (Basel, Switzerland). [Online] 11 (1), 48-.
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
